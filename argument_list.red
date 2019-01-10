@@ -5,6 +5,11 @@ Red [
   subversion: 'alpha
 
 ]
+; quick fix: `parse-func-spec` moved to `help-ctx/func-spec-ctx`:
+unless value? 'parse-func-spec [
+    parse-func-spec: :help-ctx/func-spec-ctx/parse-func-spec
+]
+
 get-params: function ['fun] [
   params: select parse-func-spec get fun 'params
   names: copy []
