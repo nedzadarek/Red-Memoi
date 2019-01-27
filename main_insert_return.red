@@ -72,10 +72,12 @@ memoize: function ['fun][
                     return-block 
                     compose/deep [
                         ;print "val from the parse"
-                        ;probe (val)
+                        ; print type? (quote val)
                         unless cache/(par) [
-                            append cache reduce [par none]
-                            change (quote (find/tail/only cache par)) (val)
+                            append cache reduce [
+                                par
+                                (val)
+                            ]
                             ; use get-word (:word) because we are changing `return` for a block that contain `return` 
                             :return (val) 
                         ]
