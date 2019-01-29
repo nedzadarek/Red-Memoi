@@ -79,7 +79,7 @@ memoize: function ['fun][
                                 (val)
                             ]
                             ; use get-word (:word) because we are changing `return` for a block that contain `return` 
-                            :return (val) 
+                            (:return) (val) 
                         ]
                     ] 
                     2
