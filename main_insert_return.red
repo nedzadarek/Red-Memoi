@@ -93,7 +93,7 @@ memoize: function ['fun][
   set fun
     func
       ;spec-of get fun
-      (spec: spec-of get fun   either spec/(/local) [ append spec par ] [append spec [/local par]])
+      (spec: spec-of get fun   either spec/(/local) [ append spec 'par ] [append spec [/local par]])
       bind  head
               insert
                 (body-of get fun)
